@@ -13,6 +13,10 @@ int handle_builtin(char **args)
 	}
 	return (-1);
 }
+/**
+ * handle_error  - handle errors.
+ * @msg: the message error.
+ */
 void handle_error(const char *msg)
 {
 	perror(msg);
