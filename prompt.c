@@ -1,15 +1,16 @@
 #include "shell.h"
 
 /**
- * prompt - print prompt.
+ * prompt - display a prompt.
+ *
  */
 void prompt(void)
 {
-	int signal = 1;
+	int status = 1;
 
-	signal = isatty(0);
-	if (signal == 1)
+	status = isatty(STDIN_FILENO);
+	if (status == 1)
 	{
-		write(STDOUT_FILENO, "$ ", 2);
+		printf("$ ");
 	}
 }
